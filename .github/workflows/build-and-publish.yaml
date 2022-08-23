@@ -20,7 +20,7 @@ jobs:
 
     # steps to perform in job
     steps:
-      - name: Checkcout code
+      - name: Checkout code
         uses: actions/checkout@v3
 
       - name: Set up QEMU
@@ -37,7 +37,7 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: Build Docker image and push to Docker Hub and GitHub Container Registry
+      - name: Build Docker image and push to Docker Hub
         id: docker_build
         uses: docker/build-push-action@v3
         with:

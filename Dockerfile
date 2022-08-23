@@ -1,7 +1,7 @@
-# Using Node:10 Image Since it contains all
+# Using Node:16.14.0-alpine Image
 # the necessary build tools required for dependencies with native build (node-gyp, python, gcc, g++, make)
-# First Stage : to install and build dependences
 
+# First Stage : to install and build dependences
 FROM node:16.14.0-alpine AS builder
 WORKDIR /app
 COPY ./package.json ./
